@@ -7,6 +7,7 @@ import net.minecraft.client.gui.DrawContext;
 import net.minecraft.client.toast.Toast;
 import net.minecraft.client.toast.ToastManager;
 import org.spongepowered.asm.mixin.Mixin;
+import org.spongepowered.asm.mixin.Unique;
 import org.spongepowered.asm.mixin.injection.At;
 import org.spongepowered.asm.mixin.injection.Inject;
 import org.spongepowered.asm.mixin.injection.callback.CallbackInfo;
@@ -41,6 +42,7 @@ public class ToastManagerMixin { // basically the entire source code of The Open
     @Mixin(targets = "net.minecraft.client.toast.ToastManager$Entry")
     static class Entry<T extends Toast> { // inner class of ToastManager
 
+        @Unique
         public boolean evaluateToastStatus(){
             if(Methane.settings.disableToasts && !MinecraftClient.getInstance().getLanguageManager().getLanguage().toString().equals("ko_kr")){
                 return true;
@@ -55,8 +57,8 @@ public class ToastManagerMixin { // basically the entire source code of The Open
          * @reason remove toast rendering logic
          */
         @Inject(method = "draw", at=@At("HEAD"),cancellable = true)
-        public void draw(int x, DrawContext context, CallbackInfoReturnable<Boolean> cir) { // lie about drawing
-            if(evaluateToastStatus()) cir.setReturnValue(true);
+        public void draw(DrawContext context, int scaledWindowWidth, CallbackInfo ci) { // lie about drawing
+            if(evaluateToastStatus()) ci.cancel();
         }
     }
 

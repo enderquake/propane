@@ -2,11 +2,7 @@ package com.modrinth.methane.mixin;
 
 import com.modrinth.methane.Methane;
 import net.minecraft.client.MinecraftClient;
-import net.minecraft.scoreboard.Scoreboard;
-import net.minecraft.scoreboard.ScoreboardDisplaySlot;
-import net.minecraft.scoreboard.ScoreboardEntry;
 import net.minecraft.util.math.BlockPos;
-import net.minecraft.util.math.ChunkSectionPos;
 import net.minecraft.world.HeightLimitView;
 import net.minecraft.world.chunk.light.ChunkLightProvider;
 import net.minecraft.world.chunk.light.LightingProvider;

@@ -1,7 +1,5 @@
 package com.modrinth.methane.client;
 
-import com.github.anopensaucedev.libmcdevfabric.Debug;
-import com.modrinth.methane.Methane;
 import com.modrinth.methane.mixin.accessor.WorldRendererBuiltChunkStorageAccessor;
 import net.minecraft.client.MinecraftClient;
 import net.minecraft.client.render.BuiltChunkStorage;

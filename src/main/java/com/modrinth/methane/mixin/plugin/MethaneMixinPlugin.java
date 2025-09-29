@@ -1,7 +1,5 @@
 package com.modrinth.methane.mixin.plugin;
 
-import com.github.anopensaucedev.libmcdevfabric.Debug;
-import com.github.anopensaucedev.libmcdevfabric.Libmcdev;
 import com.modrinth.methane.Methane;
 import net.fabricmc.loader.api.FabricLoader;
 import org.objectweb.asm.tree.ClassNode;
