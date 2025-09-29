@@ -17,4 +17,3 @@ clients, [available here.](https://github.com/AnOpenSauceDev/Methane-Server-Util
 > - Fabric API 
 > - Cloth Config
 > - Mod Menu
-    <br>
