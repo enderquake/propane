@@ -1,0 +1,48 @@
+{
+  "schemaVersion": 1,
+  "id": "methane",
+  "version": "${version}",
+  "name": "Methane",
+  "description": "Explosive optimisations for your favourite block game.",
+  "authors": ["AnOpenSauceDev"],
+  "contact": {
+    "issues": "https://github.com/AnOpenSauceDev/Methane-mod/issues"
+  },
+  "license": "MIT",
+  "icon": "assets/methane/Methane-logo-Large.png",
+  "environment": "client",
+  "entrypoints": {
+    "main": [
+      "com.modrinth.methane.Methane"
+    ],
+    "client": [
+      "com.modrinth.methane.client.MethaneClient"
+    ],
+    "server": [
+      "com.modrinth.methane.server.MethaneServerError"
+    ],
+    "modmenu": [
+      "com.modrinth.methane.ModMenuIntegration"
+    ]
+  },
+  "mixins": [
+    "methane.mixins.json"
+  ],
+  "depends": {
+    "cloth-config": "*",
+    "fabricloader": ">=0.14.0",
+    "minecraft": ">=1.20.2"
+  },
+  "suggests": {
+    "methane_server": "*"
+  },
+  "recommends": {
+    "modmenu": "*"
+  },
+  "conflicts": {
+    "starlight": "*"
+  },
+  "contributors": [
+    "JustAlittleWolf","FITFC","craftish37","rebub","TheBossMagnus","ItsRedlyXD"
+  ]
+}

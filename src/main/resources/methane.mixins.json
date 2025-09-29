@@ -1,0 +1,34 @@
+{
+  "required": true,
+  "minVersion": "0.8",
+  "package": "com.modrinth.methane.mixin",
+  "compatibilityLevel": "JAVA_17",
+  "mixins": [
+    "FogRendererMixin",
+    "ChunkLightProviderMixin",
+    "GameRendererMixin",
+    "LightingProviderMixin",
+    "LightmapTextureManagerMixin",
+    "MinecraftServerMixin",
+    "getLightLevelHack.MushroomPlantMixin"
+  ],
+  "plugin": "com.modrinth.methane.mixin.plugin.MethaneMixinPlugin",
+  "client": [
+    "FogRendererMixin",
+    "DestructiveWeatherOptimisation",
+    "GameMenuScreenMixin",
+    "GameRendererMixin",
+    "HandledScreenMixin",
+    "LightmapTextureManagerMixin",
+    "ParticleMixin",
+    "TitleScreenMixin",
+    "ToastManagerMixin",
+    "WorldRendererMixin",
+    "accessor.WorldRendererBuiltChunkStorageAccessor",
+    "getLightLevelHack.ChunkRenderReigonMixin",
+    "getLightLevelHack.ClientWorldMixin"
+  ],
+  "injectors": {
+    "defaultRequire": 1
+  }
+}
