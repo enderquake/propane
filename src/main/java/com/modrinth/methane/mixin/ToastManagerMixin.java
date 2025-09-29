@@ -1,7 +1,6 @@
 package com.modrinth.methane.mixin;
 
 import com.modrinth.methane.Methane;
-
 import net.minecraft.client.MinecraftClient;
 import net.minecraft.client.gui.DrawContext;
 import net.minecraft.client.toast.Toast;
@@ -11,7 +10,6 @@ import org.spongepowered.asm.mixin.Unique;
 import org.spongepowered.asm.mixin.injection.At;
 import org.spongepowered.asm.mixin.injection.Inject;
 import org.spongepowered.asm.mixin.injection.callback.CallbackInfo;
-import org.spongepowered.asm.mixin.injection.callback.CallbackInfoReturnable;
 
 @Mixin(value = ToastManager.class,priority = 4500) // take priority over other mixins (and The Open Sauce Toast Killer)
 public class ToastManagerMixin { // basically the entire source code of The Open Sauce Toast Killer is here.
@@ -35,7 +33,9 @@ public class ToastManagerMixin { // basically the entire source code of The Open
      */
     @Inject(method = "add",at=@At("HEAD"),cancellable = true)
     public void add(Toast toast, CallbackInfo ci){
-        if(evaluateToastStatus()){ Methane.MethaneDebugger.Log("prevented a toast from loading"); ci.cancel();}
+        if (evaluateToastStatus()) {
+            ci.cancel();
+        }
     }
 
 
