@@ -19,12 +19,6 @@ public abstract class LightmapTextureManagerMixin implements PacketListener {
     @Shadow
     private boolean dirty;
 
-    @Shadow public abstract void disable();
-
-    @Shadow public abstract void close();
-
-    @Shadow public abstract void enable();
-
     /**
      * @author AnOpenSauceDev
      * @reason force light to not tick.
@@ -35,7 +29,6 @@ public abstract class LightmapTextureManagerMixin implements PacketListener {
             //disable();
             //TODO: light flicker impl
             this.dirty = false;
-            return;
         }
         else
         {
@@ -43,14 +36,10 @@ public abstract class LightmapTextureManagerMixin implements PacketListener {
             this.flickerIntensity *= 0.9f;
             this.dirty = true;
         }
-
     }
 
     @Inject(method = "update", at = @At("HEAD"),cancellable = true)
     public void cancel(float delta, CallbackInfo ci){
         if(Methane.ModActive) ci.cancel();
-
     }
-
-
 }

@@ -1,6 +1,6 @@
 # Propane
 
-A maintained fork of
+A "maintained" fork of
 the Fabric/Quilt performance mod [Methane](https://github.com/AnOpenSauceDev/Methane-mod) originally
 by [AnOpenSauceDev](https://github.com/AnOpenSauceDev).<br><br>
 Original releases of methane are available here<br>

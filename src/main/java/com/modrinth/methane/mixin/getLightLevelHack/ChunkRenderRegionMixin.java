@@ -12,7 +12,7 @@ import org.spongepowered.asm.mixin.injection.callback.CallbackInfoReturnable;
 import static com.modrinth.methane.client.BrightnessUtil.calculateBrightnessScale;
 
 @Mixin(ChunkRendererRegion.class)
-public class ChunkRenderReigonMixin {
+public class ChunkRenderRegionMixin {
 
 
     //impl. of: BlockRenderView$getBrightness

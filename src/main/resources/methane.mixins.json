@@ -25,7 +25,7 @@
     "ToastManagerMixin",
     "WorldRendererMixin",
     "accessor.WorldRendererBuiltChunkStorageAccessor",
-    "getLightLevelHack.ChunkRenderReigonMixin",
+    "getLightLevelHack.ChunkRenderRegionMixin",
     "getLightLevelHack.ClientWorldMixin"
   ],
   "injectors": {

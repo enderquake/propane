@@ -14,8 +14,9 @@ import org.spongepowered.asm.mixin.injection.callback.CallbackInfo;
 @Mixin(value = ToastManager.class,priority = 4500) // take priority over other mixins (and The Open Sauce Toast Killer)
 public class ToastManagerMixin { // basically the entire source code of The Open Sauce Toast Killer is here.
 
+    @Unique
     public boolean evaluateToastStatus(){
-        if(Methane.settings.disableToasts && !MinecraftClient.getInstance().getLanguageManager().getLanguage().toString().equals("ko_kr")){
+        if(Methane.settings.disableToasts && !MinecraftClient.getInstance().getLanguageManager().getLanguage().equals("ko_kr")){
             return true;
         }else {
             return false;
@@ -44,7 +45,7 @@ public class ToastManagerMixin { // basically the entire source code of The Open
 
         @Unique
         public boolean evaluateToastStatus(){
-            if(Methane.settings.disableToasts && !MinecraftClient.getInstance().getLanguageManager().getLanguage().toString().equals("ko_kr")){
+            if(Methane.settings.disableToasts && !MinecraftClient.getInstance().getLanguageManager().getLanguage().equals("ko_kr")){
                 return true;
             }else {
                 return false;

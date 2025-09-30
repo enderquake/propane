@@ -24,7 +24,6 @@ public class Methane implements ModInitializer {
 
     @Override
     public void onInitialize() {
-
         MethaneLogger.info("Methane has loaded!");
         MethaneDebugger.Log("Methane is in developer mode. If you are reading this in a non-dev environment, please create an issue.");
 
@@ -37,11 +36,4 @@ public class Methane implements ModInitializer {
             Methane.MethaneLogger.warn("One or more destructive Methane renderer features are being used. You might experience unusual bugs with other mods.");
         }
     }
-
-
-
-    public static boolean intToBoolConversion(int i){
-        return i != 0; // if "i" is not zero, return true
-    }
-
 }
