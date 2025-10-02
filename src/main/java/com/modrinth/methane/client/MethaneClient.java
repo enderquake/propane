@@ -22,33 +22,7 @@ public class MethaneClient implements ClientModInitializer {
     @Override
     public void onInitializeClient() {
 
-
-        //HudRenderCallback.EVENT.register(new HudRenderListener());
-
-        Methane.isClient = true;
-        /*
-
-
-        ClientPlayNetworking.registerGlobalReceiver(METHANE_STATE_PACKET, ((client, handler, buf, responseSender) -> {
-
-
-            int[] data = buf.readIntArray(); // 0 = enforceModState, 1 = globalModState, 2 = forceMethane (won't ever be used)
-            if (intToBoolConversion(data[0])) {
-                MethaneClient.ToggleMethaneSetBool(client, intToBoolConversion(data[1]));
-                Methane.MethaneDebugger.Log("forcing methane server config");
-
-                Methane.ServerForbidsChanging = true;
-                Methane.playerBlockingPacket = true;
-            } else {
-                // if the server allows changes
-                Methane.MethaneDebugger.Log("Methane settings prompt open");
-                setScreen(new MethaneJoinPopUp(Text.of("Methane Server Settings"), intToBoolConversion(data[1])));
-            }
-
-        }));
-
-         */
-
+        Methane.isClient = true;*
 
         Methane.ModActive = Methane.settings.modstate;
 
@@ -119,7 +93,7 @@ public class MethaneClient implements ClientModInitializer {
             } else {
                 if (Methane.ModActive) {
 
-                    client.player.sendMessage(Text.of("Methane activated!"), true);
+                    client.player.sendMessage(Text.translatable("Methane activated!"), true);
 
                 } else {
 

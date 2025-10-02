@@ -1,12 +1,15 @@
 {
   "schemaVersion": 1,
-  "id": "methane",
+  "id": "propane",
   "version": "${version}",
-  "name": "Methane",
-  "description": "Explosive optimisations for your favourite block game.",
-  "authors": ["AnOpenSauceDev"],
+  "name": "Propane",
+  "description": "A maintained fork of Methane. Explosive optimisations for your favourite block game.",
+  "authors": [
+    "AnOpenSauceDev",
+    "Enderquake"
+  ],
   "contact": {
-    "issues": "https://github.com/AnOpenSauceDev/Methane-mod/issues"
+    "issues": "https://github.com/enderquake/propane/issues"
   },
   "license": "MIT",
   "icon": "assets/methane/Methane-logo-Large.png",
@@ -18,9 +21,6 @@
     "client": [
       "com.modrinth.methane.client.MethaneClient"
     ],
-    "server": [
-      "com.modrinth.methane.server.MethaneServerError"
-    ],
     "modmenu": [
       "com.modrinth.methane.ModMenuIntegration"
     ]
@@ -31,10 +31,9 @@
   "depends": {
     "cloth-config": "*",
     "fabricloader": ">=0.14.0",
-    "minecraft": ">=1.20.2"
+    "minecraft": ">=1.21"
   },
   "suggests": {
-    "methane_server": "*"
   },
   "recommends": {
     "modmenu": "*"
@@ -43,6 +42,5 @@
     "starlight": "*"
   },
   "contributors": [
-    "JustAlittleWolf","FITFC","craftish37","rebub","TheBossMagnus","ItsRedlyXD"
   ]
 }
